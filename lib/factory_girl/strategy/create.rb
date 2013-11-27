@@ -11,6 +11,7 @@ module FactoryGirl
           evaluation.notify(:before_create, instance)
           evaluation.create(instance)
           evaluation.notify(:after_create, instance)
+          instance.reload
         end
       end
     end
